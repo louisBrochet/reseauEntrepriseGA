@@ -60,7 +60,7 @@
                                     <div class="form-header be-primary">
                                         <h1>Reserveration</h1>
                                     </div>
-                                    <form name = "booking-form" onsubmit="return book_a_date()">
+                                    <form id = 'booking-form' name = "booking-form" onsubmit="return book_a_date()">
                                         <div class="row">
                                             <div class="col-sm-6">
                                                 <div class="form-group">
@@ -84,8 +84,11 @@
                                             <input name = 'pNumber' class="form-control" type="tel" placeholder="Entrez votre n° de GSM" required>
                                         </div>
                                         <div class="form-group">
-                                            <span class="form-label">Adresse</span>
-                                            <input name = 'addres' class="form-control" type="text" placeholder="Enter ZIP/Location" required>
+                                            <span class="form-label">Lieu</span>
+                                            <select name = 'lieu' class="form-control">
+                                                <option>Anvers</option>
+                                                <option>Bruxelles</option>
+                                            </select>
                                         </div>
                                         <div class="row">
                                             <div class="col-sm-5">
@@ -149,7 +152,7 @@
                                             </div>
                                         </div>
                                         <div class="form-btn">
-                                            <button class="submit-btn">Book Now</button>
+                                            <button type= 'submit' class="submit-btn">Book Now</button>
                                         </div>
                                     </form>
                                 </div>
