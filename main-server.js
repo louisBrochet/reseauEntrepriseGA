@@ -15,7 +15,7 @@ app.get('/', (req, res) => {
 })
 
 app.get('/rendez-vous', (req, res) => {
-    res.sendFile(__dirname + '/views/index.html')
+   res.sendFile(__dirname + '/views/rdv.html')
  })
 
 app.use(function(req, res, next){
