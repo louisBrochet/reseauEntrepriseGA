@@ -9,6 +9,7 @@
   "author": "Crenier Amaury",
   "license": "ISC",
   "dependencies": {
+    "bcrypt": "^5.0.0",
     "express": "^4.17.1",
     "express-rate-limit": "^5.2.3",
     "mysql": "^2.18.1",
