@@ -60,41 +60,50 @@
                                     <div class="form-header be-primary">
                                         <h1>Reserveration</h1>
                                     </div>
-                                    <form id = 'booking-form' name = "booking-form" onsubmit="return book_a_date()">
+                                    <form id = 'booking-form' name = "booking-form">
                                         <div class="row">
                                             <div class="col-sm-6">
                                                 <div class="form-group">
                                                     <span class="form-label">Nom</span>
-                                                    <input name= 'lname' class="form-control" type="text" placeholder="Entre votre nom" required>
+                                                    <input id = 'lname' name= 'lname' class="form-control" type="text" placeholder="Entre votre nom" required>
                                                 </div>
                                             </div>
                                             <div class="col-sm-6">
                                                 <div class="form-group">
                                                     <span class="form-label">Prenom</span>
-                                                    <input name= 'fname' class="form-control" type="text" placeholder="Entrez votre prénom" required>
+                                                    <input id = 'fname' name= 'fname' class="form-control" type="text" placeholder="Entrez votre prénom" required>
                                                 </div>
                                             </div>
                                         </div>
                                         <div class="form-group">
                                             <span class="form-label">E-mail</span>
-                                            <input name = 'mail' class="form-control" type="email" placeholder="Entrez votre addresse e-mail" required>
+                                            <input id = 'mail' name = 'mail' class="form-control" type="email" placeholder="Entrez votre addresse e-mail" required>
                                         </div>
                                         <div class="form-group">
                                             <span class="form-label">N° de téléphone</span>
-                                            <input name = 'pNumber' class="form-control" type="tel" placeholder="Entrez votre n° de GSM" required>
+                                            <input id = 'pNumber' name = 'pNumber' class="form-control" type="tel" placeholder="Entrez votre n° de GSM" required>
                                         </div>
                                         <div class="form-group">
                                             <span class="form-label">Lieu</span>
-                                            <select name = 'lieu' class="form-control">
+                                            <select id = 'location' name = 'type' class="form-control">
                                                 <option>Anvers</option>
                                                 <option>Bruxelles</option>
                                             </select>
+                                            <span class="select-arrow"></span>
+                                        </div>
+                                        <div class="form-group">
+                                            <span class="form-label">Raison du RDV</span>
+                                            <select id = 'type' name = 'type' class="form-control">
+                                                <option>Dépistage</option>
+                                                <option>Vaccin</option>
+                                            </select>
+                                            <span class="select-arrow"></span>
                                         </div>
                                         <div class="row">
                                             <div class="col-sm-5">
                                                 <div class="form-group">
                                                     <span class="form-label">Date du rdv</span>
-                                                    <input name = 'date' class="form-control" type="date" required>
+                                                    <input id = 'date' name = 'date' class="form-control" type="date" required>
                                                 </div>
                                             </div>
                                             <div class="col-sm-7">
@@ -102,19 +111,17 @@
                                                     <div class="col-sm-4">
                                                         <div class="form-group">
                                                             <span class="form-label">Heure</span>
-                                                            <select name = 'hour' class="form-control">
-                                                                <option>1</option>
-                                                                <option>2</option>
-                                                                <option>3</option>
-                                                                <option>4</option>
-                                                                <option>5</option>
-                                                                <option>6</option>
-                                                                <option>7</option>
+                                                            <select id = 'hour' name = 'hour' class="form-control">
                                                                 <option>8</option>
                                                                 <option>9</option>
                                                                 <option>10</option>
                                                                 <option>11</option>
                                                                 <option>12</option>
+                                                                <option>13</option>
+                                                                <option>14</option>
+                                                                <option>15</option>
+                                                                <option>16</option>
+                                                                <option>17</option>
                                                             </select>
                                                             <span class="select-arrow"></span>
                                                         </div>
@@ -122,28 +129,11 @@
                                                     <div class="col-sm-4">
                                                         <div class="form-group">
                                                             <span class="form-label">Min</span>
-                                                            <select name = 'minute' class="form-control">
-                                                                <option>05</option>
-                                                                <option>10</option>
+                                                            <select id = 'minute' name = 'minute' class="form-control">
+                                                                <option>00</option>
                                                                 <option>15</option>
-                                                                <option>20</option>
-                                                                <option>25</option>
                                                                 <option>30</option>
-                                                                <option>35</option>
-                                                                <option>40</option>
                                                                 <option>45</option>
-                                                                <option>50</option>
-                                                                <option>55</option>
-                                                            </select>
-                                                            <span class="select-arrow"></span>
-                                                        </div>
-                                                    </div>
-                                                    <div class="col-sm-4">
-                                                        <div class="form-group">
-                                                            <span class="form-label">AM/PM</span>
-                                                            <select name = 'timezone' class="form-control">
-                                                                <option>AM</option>
-                                                                <option>PM</option>
                                                             </select>
                                                             <span class="select-arrow"></span>
                                                         </div>
