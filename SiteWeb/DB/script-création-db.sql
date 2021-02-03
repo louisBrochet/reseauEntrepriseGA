@@ -2,8 +2,8 @@ CREATE DATABASE `entreprise` /*!40100 DEFAULT CHARACTER SET utf8mb4 COLLATE utf8
 
 CREATE TABLE `rdv` (
   `id` int NOT NULL AUTO_INCREMENT,
-  `Nom` varchar(45) DEFAULT NULL,
-  `Prenom` varchar(45) DEFAULT NULL,
+  `nom` varchar(45) DEFAULT NULL,
+  `prenom` varchar(45) DEFAULT NULL,
   `date` datetime DEFAULT NULL,
   `email` varchar(100) DEFAULT NULL,
   `telephone` varchar(45) DEFAULT NULL,
