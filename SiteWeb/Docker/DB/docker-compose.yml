@@ -2,7 +2,7 @@ version: '3.6'
 
 services:
   db:
-    image: arnaudnilens/db-ga:latest
+    image: arnaudnilens/db-ga
     restart: always
 
     environment:
