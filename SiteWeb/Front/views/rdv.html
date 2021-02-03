@@ -18,6 +18,10 @@
         <!-- Core theme CSS (includes Bootstrap)-->
         <link href="css/styles.css" rel="stylesheet" />
         <link href="css/rdvStyle.css" rel="stylesheet" />
+        <!--FullCalendar-->    
+        <link href='css/main.css' rel='stylesheet' />
+        <script src='js/main.js'></script>
+
     </head>
     <body id="page-top">
         <!-- Navigation-->
@@ -46,8 +50,6 @@
                 <!-- Masthead Subheading-->
                 <p class="masthead-subheading font-weight-light mb-0">Prendre rendez-vous</p>
             </div>
-        </header>
-        <section class="page-section bg-secondary  text-black mb-0" id="calendar">
             <div id="containerradio">
                 <div class="radio-toggles">
                     <input type="radio" id="option-1" name="radio-options">
@@ -59,7 +61,9 @@
                     <div class="slide-item"></div>
                 </div>
             </div>
-
+        </header>
+        <section class="page-section bg-secondary  text-black mb-0" id="calendar">
+                <div id='calendar'></div>
         </section>
         
         <!-- About Section-->
