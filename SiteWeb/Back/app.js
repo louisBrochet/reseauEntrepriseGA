@@ -4,13 +4,13 @@ const express = require('express');
 const app = express();
 //const fs = require('fs');
 //const https = require('https');
-//const cors = require('cors');
+const cors = require('cors');
 //const rateLimit = require("express-rate-limit");
 
-//app.use(cors({
-  //  origin: ['https://localhost:4200'],
-    //credentials: true
-//}));
+app.use(cors({
+    origin: ['http://localhost:5000'],
+    credentials: true
+}));
 
 //const limiter = rateLimit({
 //    windowMs: 15 * 60 * 1000,
