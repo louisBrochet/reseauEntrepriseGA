@@ -109,6 +109,8 @@ document.addEventListener('DOMContentLoaded', function() {
     var calendar = new FullCalendar.Calendar(calendarEl, {
       initialDate: dateNow,
       weekends: false,
+      editable: false,
+      selectable: false,
       locale: 'fr',
       initialView: 'timeGridWeek',
       businessHours: {
