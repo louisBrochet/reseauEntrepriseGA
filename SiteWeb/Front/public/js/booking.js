@@ -1,4 +1,5 @@
 
+
 const myForm = document.getElementById('booking-form')
 var form = {
     nom : document.getElementById('lname'),
@@ -20,9 +21,9 @@ myForm.addEventListener("submit", (e) => {
     form.date = dateToDateTime();
     prepareAjax();
     console.log(form)
-
-
-    
+    axios.post('localhost:3000/rdv', form).then(response => {
+        console.log(response);
+    })
    
 })
 
