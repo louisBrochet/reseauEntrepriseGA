@@ -1,4 +1,6 @@
 
 SiteWeb/Front/node_modules/
-
 SiteWeb/Back/node_modules/
+
+SiteWeb/Back/.env
+SiteWeb/Back/.gitignore
