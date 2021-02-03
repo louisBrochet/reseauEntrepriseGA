@@ -5,7 +5,7 @@ cd DB
 
 ## Récupérer les fichiers sql
 
-curl -o download.sh 
+curl -o download.sh https://raw.githubusercontent.com/louisBrochet/reseauEntrepriseGA/site_web/SiteWeb/Docker/DB/download.sh
 
 chmod 777 download.sh
 
