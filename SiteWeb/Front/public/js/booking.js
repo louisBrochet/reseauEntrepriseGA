@@ -1,3 +1,5 @@
-function book_a_date(){
-    alert(document.getElementById("booking-form").elements["fname"])
-}
+const myForm = document.getElementById('booking-form')
+
+myForm.addEventListener("submit", (e) => {
+    e.preventDefault();
+})
