@@ -1,5 +1,4 @@
 const { getRdv, getRdvAnv, getRdvBru, createRdv } = require("./rdv.service");
-const { genSaltSync, hashSync, compareSync } = require("bcrypt");
 
 module.exports = {
     getRdv: (req, res) => {
