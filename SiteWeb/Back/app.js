@@ -8,7 +8,7 @@ const cors = require('cors');
 //const rateLimit = require("express-rate-limit");
 
 app.use(cors({
-    origin: ['https://localhost:5000'],
+    origin: ['http://localhost:5000'],
     credentials: true
 }));
 

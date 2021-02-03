@@ -1,13 +1,15 @@
 
 
 const myForm = document.getElementById('booking-form')
+const url = 'http://localhost:3000/rdv/';
+
 var form = {
     nom : document.getElementById('lname'),
     prenom : document.getElementById('fname'),
     email : document.getElementById('mail'),
     telephone : document.getElementById('pNumber'),
-    lieu : document.getElementById('location').value,
-    type : document.getElementById('type').value,
+    lieu : document.getElementById('location'),
+    type : document.getElementById('type'),
     date : '',
 }
 var dateJSON = {
@@ -20,10 +22,17 @@ myForm.addEventListener("submit", (e) => {
     e.preventDefault();
     form.date = dateToDateTime();
     prepareAjax();
+    alreadyMeeting()
     console.log(form)
-    axios.post('localhost:3000/rdv', form).then(response => {
-        console.log(response);
-    })
+    // var xhttp = new XMLHttpRequest();
+    // xhttp.onreadystatechange = function() {
+    // if (this.readyState == 4 && this.status == 200) {
+    //     console.log("nice")
+    // }
+    // };
+    // xhttp.open("POST", url, true);
+    // xhttp.setRequestHeader("Content-type", "application/json");
+    // xhttp.send(JSON.stringify(form));
    
 })
 
@@ -36,11 +45,26 @@ function dateToDateTime(){
     date.setHours(dateJSON.hour.value );
     date.setHours(date.getHours() + 1 );
     date.setMinutes(dateJSON.minute.value);
+    date.setSeconds(0);
     return (date.toISOString().slice(0, 19).replace('T', ' '))
 }
 function prepareAjax(){
-    form.nom = form.nom.value
-    form.prenom = form.prenom.value
-    form.email = form.email.value
-    form.telephone = form.telephone.value
+    form.nom = form.nom.value.toLowerCase()
+    form.prenom = form.prenom.value.toLowerCase()
+    form.email = form.email.value.toLowerCase()
+    form.telephone = form.telephone.value.toLowerCase()
+    form.lieu = form.lieu.value.toLowerCase()
+    form.type = form.type.value.toLowerCase()
+}
+
+function alreadyMeeting(){
+    var xhr = new XMLHttpRequest();
+
+    xhr.onreadystatechange = function() {
+        if (xhr.readyState === 4) {
+            console.log('good')
+        }
+    }
+    xhr.open('GET', url + 'date/' + form.date, true);
+    xhr.send('');
 }
