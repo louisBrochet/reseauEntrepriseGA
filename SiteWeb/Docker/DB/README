@@ -1,0 +1,32 @@
+## Mise en place environnement
+
+mkdir DB
+cd DB
+
+## Récupérer les fichiers sql
+
+curl -o download.sh 
+
+chmod 777 download.sh
+
+## Lancer le serveur
+
+docker-compose up -d
+
+docker exec -i db_db_1 mysql -u user -p user1234 db < sql-scripts/db-init.sql
+
+
+## Vérifier la base de donnée
+
+### rentrer dans le docker en bash
+docker exec -it database_db_1 bash -l
+
+### loggin mysql
+mysql -u user -p
+(password: user1234)
+
+### sélectionner la db
+use db;
+
+### requetes a la demande en mysql
+show tables;
