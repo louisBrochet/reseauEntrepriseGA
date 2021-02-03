@@ -134,15 +134,10 @@
 .containerradio{
 	border-top: 20px solid lightgrey;
     font-family: "Inter", "Helvetica", sans-serif;
-    margin-top: 10px;
+    margin: 0;
     padding-top: 40px;
     text-align: center;
 }
-h1 {
-	font-size: 2.8rem;
-	text-align: center;
-}
-
 .radio-toggles {
     align-items: center;
     background: #eee;
