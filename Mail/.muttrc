@@ -1,6 +1,6 @@
 set imap_user = bob@activaccinbx.ephec-ti.org
 set imap_pass = linux 
-set from bob@activaccinbx.ephec-ti.org
+set from = bob@activaccinbx.ephec-ti.org
 
 set folder = imaps://activaccinbx.ephec-ti.org
 set spoolfile = "+INBOX"
