@@ -19,5 +19,5 @@ sudo curl -o api/rdv/rdv.controller.js https://raw.githubusercontent.com/louisBr
 sudo curl -o api/rdv/rdv.router.js https://raw.githubusercontent.com/louisBrochet/reseauEntrepriseGA/site_web/SiteWeb/Docker/DB/api/rdv/rdv.router.js
 sudo curl -o api/rdv/rdv.service.js https://raw.githubusercontent.com/louisBrochet/reseauEntrepriseGA/site_web/SiteWeb/Docker/DB/api/rdv/rdv.service.js
 
-sudo cd DB
+sudo cd ../DB
 sudo docker-compose up -d
