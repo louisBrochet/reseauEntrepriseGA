@@ -8,4 +8,4 @@ values ('Crenier', 'Amaury', '2021-02-05 13:30:00', 'amaurycrenier@gmail.com', '
 ('Witsel', 'Axel', '2021-02-06 12:00:00', 'cheveuxfrise@gmail.com', '0472411591', 'vaccin', 'Bruxelles'),
 ('Hazard', 'Thorgan', '2021-02-06 08:30:00', 'petitfrereaeden@gmail.com', '0491432331', 'vaccin', 'Bruxelles'),
 ('Mertens', 'Dries', '2021-02-05 16:00:00', 'recordnaples@gmail.com', '0491411359', 'depistage', 'Bruxelles'),
-('Tielemans', 'Youri', '2021-02-07 17:30:00', 'leicestermidfield@gmail.com', '0451661235', 'depistage', 'Bruxelles')
+('Tielemans', 'Youri', '2021-02-07 17:30:00', 'leicestermidfield@gmail.com', '0451661235', 'depistage', 'Bruxelles');
