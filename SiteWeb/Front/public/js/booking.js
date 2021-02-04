@@ -1,5 +1,6 @@
 const myForm = document.getElementById('booking-form')
 const url = 'http://localhost:3000/rdv/';
+const radioButton = document.getElementById('radio-buttons')
 
 var form = {
     nom : document.getElementById('lname'),
@@ -37,6 +38,25 @@ myForm.addEventListener("submit", (e) => {
     }
    
 })
+/* radioButton.addEventListener("click", function(){
+    var boutons = document.getElementsByName('radio-options');
+    var valeur;
+    for(var i = 0; i < boutons.length; i++){
+        if(boutons[i].checked){
+        valeur = boutons[i].value;
+    }
+    console.log(valeur)
+}
+});*/
+document.addEventListener('DOMContentLoaded', function() {
+
+    calendarRender([]);    
+
+  });
+
+function radioClick(position){
+    position === 'middle' ? calendarRender([]) : calendarRender(formatAgenda(position));
+}
 
 function dateToDateTime(){
     date = new Date();
@@ -93,9 +113,9 @@ function alreadyMeeting(){
     
 }
 /*Partie calendrier*/
-document.addEventListener('DOMContentLoaded', function() {
 
-    var meetingEvents = formatAgenda("anvers");
+
+  function calendarRender(meetingEvents){
     var calendarEl = document.getElementById('calendar');
     let now = new Date();
     let year = now.getFullYear();
@@ -125,14 +145,12 @@ document.addEventListener('DOMContentLoaded', function() {
     });
 
     calendar.render();
-
-  });
-
+  }
   function formatAgenda(city){
     var formattedAnswer = [];
     var res;
     var xhr = new XMLHttpRequest();
-    xhr.open('GET', url + '/anvers/' + form.date, false);
+    xhr.open('GET', url + `/${city}/` , false);
    
     xhr.onload = function() {
       var status = xhr.status;
