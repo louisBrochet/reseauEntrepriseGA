@@ -1,0 +1,21 @@
+server 127.127.1.0
+server 0.be.pool.ntp.org iburst maxsources 1
+server 1.be.pool.ntp.org iburst maxsources 1
+server 2.be.pool.ntp.org iburst maxsources 2
+
+keyfile /etc/chrony/chrony.keys
+
+driftfile /var/lib/chrony/chrony.drift
+
+logdir /var/log/chrony
+
+maxupdateskew 100.0
+
+rtcsync
+
+makestep 1 3
+
+allow 192.168.20.0/24
+allow 192.168.30.0/24
+
+# Dont forget to change the timezone of the server to access correct time value depend on your location
