@@ -1,0 +1,27 @@
+## Mise en place environnement
+
+mkdir DB
+cd DB
+
+## Récupérer les fichiers sql
+
+curl -o download.sh https://raw.githubusercontent.com/louisBrochet/reseauEntrepriseGA/site_web/SiteWeb/Docker/DB/download.sh
+
+chmod 777 download.sh
+
+## Lancer le serveur
+
+docker-compose up -d
+
+### rentrer dans le docker en bash
+docker exec -it database_db_1 bash -l
+
+### loggin mysql
+mysql -u user -p
+(password: user1234)
+
+### sélectionner la db
+use db;
+
+### requetes a la demande en mysql
+show tables;
