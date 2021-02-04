@@ -54,18 +54,18 @@
 
             </div>
             <div id="containerradio">
-                <div class="radio-toggles">
-                    <input type="radio" id="option-1" name="radio-options">
+                <div id = "radio-buttons" class="radio-toggles">
+                    <input onclick ="radioClick('anvers')" value ="anvers" type="radio" id="option-1" name="radio-options">
                     <label for="option-1">Anvers</label>
-                    <input type="radio" id="option-2" name="radio-options" checked>
+                    <input onclick ="radioClick('middle')" value=  "middle" type="radio" id="option-2" name="radio-options" checked>
                     <label for="option-2"></label>
-                    <input type="radio" id="option-3" name="radio-options">
+                    <input onclick ="radioClick('bruxelles')" value = "bruxelles" type="radio" id="option-3" name="radio-options">
                     <label for="option-3">Bruxelles</label>
                     <div class="slide-item"></div>
                 </div>
             </div>
         </header>
-        <section class="page-section bg-secondary  text-black mb-0" id="calendar">
+        <section class="page-section bg-secondary text-black mb-0" id="calendar">
                 <div id='calendar'></div>
         </section>
         
@@ -151,9 +151,7 @@
                                                             <span class="form-label">Min</span>
                                                             <select id = 'minute' name = 'minute' class="form-control">
                                                                 <option>00</option>
-                                                                <option>15</option>
                                                                 <option>30</option>
-                                                                <option>45</option>
                                                             </select>
                                                             <span class="select-arrow"></span>
                                                         </div>

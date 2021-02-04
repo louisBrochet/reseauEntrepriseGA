@@ -5,5 +5,9 @@ services:
     image: arnaudnilens/web-ga:latest
     ports:
       - "80:80/tcp"
+      - "443:443/tcp"
+    expose:
+      - '80'
+      - '443'
     environment:
       DEBUG: nodejs-docker-express:*

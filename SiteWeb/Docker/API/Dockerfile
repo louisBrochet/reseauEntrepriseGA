@@ -4,15 +4,14 @@ RUN mkdir -p /home/node/app/node_modules && chown -R node:node /home/node/app
 
 WORKDIR /home/node/app
 
-COPY package*.json ./
+COPY /api/package*.json ./
 
 USER node
 
 RUN npm install
 
-COPY --chown=node:node . .
+COPY --chown=node:node ./api .
 
-EXPOSE 80
-EXPOSE 443
+EXPOSE 3000
 
-CMD [ "node", "main-server.js" ]
+CMD [ "node", "app.js" ]
