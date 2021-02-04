@@ -10,7 +10,7 @@ USER node
 
 RUN npm install
 
-COPY --chown=node:node . .
+COPY --chown=node:node ./api .
 
 EXPOSE 3000
 

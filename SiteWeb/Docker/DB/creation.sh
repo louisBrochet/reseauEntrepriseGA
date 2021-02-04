@@ -12,17 +12,14 @@ sudo curl -o DB/cript/db-data.sql https://raw.githubusercontent.com/louisBrochet
 sudo cd ..
 
 sudo mkdir api
+sudo mkdir api/rdv
 sudo curl -o api/app.js https://raw.githubusercontent.com/louisBrochet/reseauEntrepriseGA/site_web/SiteWeb/Docker/DB/api/app.js
 sudo curl -o api/database.js https://raw.githubusercontent.com/louisBrochet/reseauEntrepriseGA/site_web/SiteWeb/Docker/DB/api/database.js
-sudo curl -o api/docker-compose.yml https://raw.githubusercontent.com/louisBrochet/reseauEntrepriseGA/site_web/SiteWeb/Docker/DB/api/docker-compose.yml
 sudo curl -o api/package.json https://raw.githubusercontent.com/louisBrochet/reseauEntrepriseGA/site_web/SiteWeb/Docker/DB/api/package.json
 sudo curl -o api/package-lock.json https://raw.githubusercontent.com/louisBrochet/reseauEntrepriseGA/site_web/SiteWeb/Docker/DB/api/package-lock.json
-
-sudo cd api
-sudo mkdir rdv
-sudo curl -o rdv/rdv.controller.js https://raw.githubusercontent.com/louisBrochet/reseauEntrepriseGA/site_web/SiteWeb/Docker/DB/api/rdv/rdv.controller.js
-sudo curl -o rdv/rdv.router.js https://raw.githubusercontent.com/louisBrochet/reseauEntrepriseGA/site_web/SiteWeb/Docker/DB/api/rdv/rdv.router.js
-sudo curl -o rdv/rdv.service.js https://raw.githubusercontent.com/louisBrochet/reseauEntrepriseGA/site_web/SiteWeb/Docker/DB/api/rdv/rdv.service.js
+sudo curl -o api/rdv/rdv.controller.js https://raw.githubusercontent.com/louisBrochet/reseauEntrepriseGA/site_web/SiteWeb/Docker/DB/api/rdv/rdv.controller.js
+sudo curl -o api/rdv/rdv.router.js https://raw.githubusercontent.com/louisBrochet/reseauEntrepriseGA/site_web/SiteWeb/Docker/DB/api/rdv/rdv.router.js
+sudo curl -o api/rdv/rdv.service.js https://raw.githubusercontent.com/louisBrochet/reseauEntrepriseGA/site_web/SiteWeb/Docker/DB/api/rdv/rdv.service.js
 
 sudo docker-compose up -d
 
