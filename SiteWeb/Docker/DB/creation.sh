@@ -1,15 +1,17 @@
 sudo apt-get -y install docker
 sudo apt-get -y install docker-compose
 
-mkdir DB
+sudo mkdir DB
 
-curl -o DB/docker-compose.yml https://raw.githubusercontent.com/louisBrochet/reseauEntrepriseGA/site_web/SiteWeb/Docker/DB/docker-compose.yml
+sudo curl -o DB/docker-compose.yml https://raw.githubusercontent.com/louisBrochet/reseauEntrepriseGA/site_web/SiteWeb/Docker/DB/docker-compose.yml
 
-mkdir DB/script
-curl -o DB/script/db-init.sql https://raw.githubusercontent.com/louisBrochet/reseauEntrepriseGA/site_web/SiteWeb/Docker/DB/script/db-init.sql
-curl -o DB/cript/db-data.sql https://raw.githubusercontent.com/louisBrochet/reseauEntrepriseGA/site_web/SiteWeb/Docker/DB/script/db-data.sql
+sudo mkdir DB/script
+sudo curl -o DB/script/db-init.sql https://raw.githubusercontent.com/louisBrochet/reseauEntrepriseGA/site_web/SiteWeb/Docker/DB/script/db-init.sql
+sudo curl -o DB/cript/db-data.sql https://raw.githubusercontent.com/louisBrochet/reseauEntrepriseGA/site_web/SiteWeb/Docker/DB/script/db-data.sql
 
-cd DB
-sudo docker-compose up -d
+sudo cd DB
+sudo docker-compose up -dls
 
+sudo docker exec -it db_db_1 bash -l
 
+mysql -u user -p
