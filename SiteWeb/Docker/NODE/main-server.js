@@ -1,7 +1,7 @@
 const express = require('express');
 //var fs = require("fs");
 const app = express();
-const PORT = 8080;
+const PORT = 80;
 const HOST = '0.0.0.0';
 
 app.use(express.static('public'));
