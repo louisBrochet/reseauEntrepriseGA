@@ -18,7 +18,7 @@ var dateJSON = {
 
 myForm.addEventListener("submit", (e) => {
     e.preventDefault();
-    
+
     form.date = dateToDateTime();
     prepareAjax();
     //alreadyMeeting()
@@ -111,7 +111,16 @@ document.addEventListener('DOMContentLoaded', function() {
 
     var calendar = new FullCalendar.Calendar(calendarEl, {
       initialDate: dateNow,
+      weekends: false,
+      editable: false,
+      selectable: false,
+      locale: 'fr',
       initialView: 'timeGridWeek',
+      businessHours: {
+        daysOfWeek: [ 1, 2, 3, 4, 5],
+        startTime: '08:00',
+        endTime: '17:00',
+      },
       events: meetingEvents
     });
 
