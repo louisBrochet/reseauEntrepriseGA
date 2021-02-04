@@ -1,5 +1,5 @@
 const myForm = document.getElementById('booking-form')
-const url = 'http://localhost:3000/rdv/';
+const url = 'http://localhost:3000/rdv';
 const radioButton = document.getElementById('radio-buttons')
 
 var form = {
