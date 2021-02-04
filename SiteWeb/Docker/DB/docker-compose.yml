@@ -40,9 +40,6 @@ services:
     ports:
     - '3000:3000'
     
-    volumes:
-    - ./api/:/
-    
 volumes:
   mysql-data:
     name: mysql-data
