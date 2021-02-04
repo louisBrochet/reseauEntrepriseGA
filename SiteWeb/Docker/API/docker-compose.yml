@@ -1,0 +1,45 @@
+version: '3.6'
+
+services:
+    
+  db:
+    image: arnaudnilens/db-ga:latest
+    restart: always
+
+    environment:
+      MYSQL_DATABASE: 'db'
+      MYSQL_USER: 'user'
+      MYSQL_PASSWORD: 'user1234'
+      MYSQL_ROOT_PASSWORD: 'user1234'
+
+    ports:
+      - '3306:3306'
+
+    expose:
+      - '3306'
+
+    volumes:
+    - mysql-data:/var/lib/mysql
+    - ./script/:/docker-entrypoint-initdb.d
+    
+  api:
+    image: arnaudnilens/api-ga:latest
+    restart: always
+    
+    links:
+    - 'db:database'
+
+    environment:
+      APP_PORT: 3000
+      DB_PORT: 3306
+      DB_HOST: database
+      DB_USER: user
+      DB_PASS: user1234
+      MYSQL_DB: db
+    
+    ports:
+    - '3000:3000'
+    
+volumes:
+  mysql-data:
+    name: mysql-data
