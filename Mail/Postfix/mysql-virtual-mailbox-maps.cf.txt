@@ -1,0 +1,5 @@
+user = messagerieUser
+password = linux
+hosts = 127.0.0.1
+dbname = messagerie
+query = SELECT maildir FROM virtual_users WHERE email='%s'
