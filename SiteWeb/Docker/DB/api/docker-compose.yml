@@ -1,0 +1,18 @@
+version: '3.6'
+
+services:
+
+  api:
+    image: arnaudnilens/api-ga:latest
+    restart: always
+
+    environment:
+      APP_PORT: 3000
+      DB_PORT: 3306
+      DB_HOST: localhost
+      DB_USER: root
+      DB_PASS: user1234
+      MYSQL_DB: db
+    
+    ports:
+    - '3000:3000'
