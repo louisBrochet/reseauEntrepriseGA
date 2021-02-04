@@ -1,7 +1,7 @@
 version: '3.6'
 
 services:
-    
+
   db:
     image: arnaudnilens/db-ga:latest
     restart: always
@@ -21,28 +21,7 @@ services:
     volumes:
     - mysql-data:/var/lib/mysql
     - ./script/:/docker-entrypoint-initdb.d
-    
-  api:
-    image: arnaudnilens/api-ga:latest
-    restart: always
-    
-    links:
-    - 'db:database'
 
-    environment:
-      APP_PORT: 3000
-      DB_PORT: 3306
-      DB_HOST: database
-      DB_USER: user
-      DB_PASS: user1234
-      MYSQL_DB: db
-    
-    ports:
-    - '3000:3000'
-    
-    expose:
-    - '3000'
-    
 volumes:
   mysql-data:
     name: mysql-data
