@@ -1,8 +1,9 @@
 version: '3.6'
 
 services:
+    
   db:
-    image: arnaudnilens/db-ga
+    image: arnaudnilens/db-ga:latest
     restart: always
 
     environment:
@@ -20,7 +21,7 @@ services:
     volumes:
     - mysql-data:/var/lib/mysql
     - ./script/:/docker-entrypoint-initdb.d
-
+    
 volumes:
   mysql-data:
     name: mysql-data
