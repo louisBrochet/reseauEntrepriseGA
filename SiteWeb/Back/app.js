@@ -5,19 +5,19 @@ const app = express();
 //const fs = require('fs');
 //const https = require('https');
 const cors = require('cors');
-//const rateLimit = require("express-rate-limit");
+const rateLimit = require("express-rate-limit");
 
 app.use(cors({
     origin: ['http://localhost:5000'],
     credentials: true
 }));
 
-//const limiter = rateLimit({
-//    windowMs: 15 * 60 * 1000,
-//    max: 100
-//});
+const limiter = rateLimit({
+    windowMs: 15 * 60 * 1000,
+    max: 100
+});
 
-//app.use(limiter);
+app.use(limiter);
 
 const rdvRouter = require("./rdv/rdv.router");
 
