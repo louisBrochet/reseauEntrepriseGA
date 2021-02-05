@@ -21,6 +21,11 @@ app.use(limiter);
 
 const rdvRouter = require("./rdv/rdv.router");
 
+//site vitrine
+app.use("/",function (req,res) {
+    res.redirect("http://localhost:5000");
+});
+
 
 //const privateKey = fs.readFileSync('/etc/letsencrypt/live/menura.be/privkey.pem', 'utf8');
 //const certificate = fs.readFileSync('/etc/letsencrypt/live/menura.be/fullchain.pem', 'utf8');
