@@ -1,0 +1,2 @@
+#Add at the end :
+*.info;mail.none;authpriv.none;cron.none   @ip server
