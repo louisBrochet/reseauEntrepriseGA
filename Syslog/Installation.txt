@@ -1,0 +1,13 @@
+installation package :
+sudo apt -y install rsyslog
+
+Location du fichier de logs :
+/var/log/syslog
+
+Configurer les serveurs et clients avec les configuration rsyslog.conf
+
+Après les modifications des fichiers : 
+sudo service rsyslog restart
+
+Observer les logs entrants : 
+tail -f /var/log/syslog

@@ -1,0 +1,18 @@
+sudo nano /etc/rsyslog.conf :
+from :
+# Provides UDP syslog reception
+#module(load=”imudp”)
+#input(type=”imudp” port=”514”)
+
+# Provides TCP syslog reception
+#module(load=”imtcp”)
+#input(type=”imtcp” port=”514”)
+
+To :
+# Provides UDP syslog reception
+module(load=”imudp”)
+input(type=”imudp” port=”514”)
+
+# Provides TCP syslog reception
+module(load=”imtcp”)
+input(type=”imtcp” port=”514”)
